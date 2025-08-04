@@ -1,1 +1,46 @@
-<p>header works!</p>
+ <header id="headerbg" class="header blacktext"  [class.bgcolor]="bgcolor">
+        <div class="container">
+            <div class="navbars" id="nav-menu">
+                <div class="topbar">
+                    <div class="logo">
+                        <a  routerLink="/" class="logo-brand">
+                            <img src="images/logo.png">
+                        </a>
+
+                         <div class="flexsocial whitei">
+                            <a href="https://www.facebook.com/kennyweiss.net" class="sociallink"><i class="fa-brands fa-facebook-f"></i> </a> 
+                            <a href="https://www.instagram.com/kennyweiss.kw" class="sociallink"><i class="fa-brands fa-instagram"></i> </a>
+                            <a href="https://twitter.com/kennyweisskw" class="sociallink"><i class="fa-brands fa-x-twitter"></i> </a>
+                            <a href="https://www.tiktok.com/@kennyweisskw" class="sociallink"><i class="fa-brands fa-tiktok"></i> </a>
+                        </div>
+                    </div>
+
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="open fa-solid fa-bars"></i>
+                        <i class="close fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <ul class="navmenu">
+                    <li><a  routerLink="/" routerLinkActive="active">Home</a></li>
+                    <li><a  routerLink="/meet-kenny">Meet Kenny</a></li>
+                    <li><a routerLink="/courses">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li class="dropreletiv"><a class="active-nav" href="#"><span>Free Resources</span> <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="doropmenu">
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a class="active-nav" routerLink="/blog">Blog</a></li>
+                            <li><a href="podcast.html">Podcast</a></li>
+                            <li><a href="feelings-wheel.html">Feelings Wheel</a></li>
+                            <li><a href="worst-day-cycle.html">Worst Day Cycle</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a class="contact-nav" href="book-session.html">Book a Session</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </header>
