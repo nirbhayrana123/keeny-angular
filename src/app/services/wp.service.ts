@@ -11,10 +11,10 @@ export class WpService {
   constructor(private http: HttpClient) {}
 
   getPosts() {
-    return this.http.get(`${this.baseUrl}/posts`);
+    return this.http.get(`${this.baseUrl}/posts?_embed`);
   }
 
   getPost(id: number) {
-    return this.http.get(`${this.baseUrl}/posts/${id}`);
+    return this.http.get(`${this.baseUrl}/posts/${id}?_embed`);
   }
 }
