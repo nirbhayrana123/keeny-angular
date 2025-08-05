@@ -17,4 +17,5 @@ export class WpService {
   getPost(id: number) {
     return this.http.get(`${this.baseUrl}/posts/${id}?_embed`);
   }
+  
 }
