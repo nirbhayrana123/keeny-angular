@@ -10,12 +10,12 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule],
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']  // ✅ Fixed typo here
-})
+}) 
 export class BlogComponent implements OnInit {
   posts: any[] = [];
 
   constructor(private wp: WpService) {}
-
+ 
   ngOnInit() {
     this.wp.getPosts().subscribe((data: any) => {
       this.posts = data;
