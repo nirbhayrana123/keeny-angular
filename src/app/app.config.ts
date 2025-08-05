@@ -7,6 +7,7 @@ import { provideHttpClient,  withFetch  } from '@angular/common/http'; // 👈 i
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(),
-     provideHttpClient(withFetch()) // 👈 add this line
+     provideHttpClient(withFetch(), ) // 👈 add this line
   ]
+ 
 };

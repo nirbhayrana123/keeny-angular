@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,8 +12,7 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
-constructor(private titleService: Title, private metaService: Meta) {
+constructor(private titleService: Title, private metaService: Meta ,public router: Router) {
     this.titleService.setTitle('Home - My Awesome Website');
     this.metaService.updateTag({
       name: 'description',
