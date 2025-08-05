@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router'; // ✅ Required for route param
 import { RouterModule } from '@angular/router';
 import { WpService } from '../../../services/wp.service';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog-details',
@@ -15,6 +16,8 @@ import { WpService } from '../../../services/wp.service';
 export class BlogDetailsComponent {
   route = inject(ActivatedRoute);
   wp = inject(WpService);
+  titleService = inject(Title);
+  metaService = inject(Meta);
 
   post: any = null;
 
@@ -22,6 +25,14 @@ export class BlogDetailsComponent {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.wp.getPost(id).subscribe((res) => {
       this.post = res;
+
+// Set title and meta
+      this.titleService.setTitle(this.post.title.rendered);
+      this.metaService.updateTag({
+        name: 'description',
+        content: this.post.excerpt?.rendered.replace(/<[^>]+>/g, '') || '',
+      });
+
     });
   }
 }
