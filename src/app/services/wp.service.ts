@@ -18,3 +18,5 @@ export class WpService {
     return this.http.get(`${this.baseUrl}/posts/${id}?_embed`);
   }
 }
+
+
