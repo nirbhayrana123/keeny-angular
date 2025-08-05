@@ -5,7 +5,7 @@ import { WpService } from '../../services/wp.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-blog', 
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './blog.component.html',
